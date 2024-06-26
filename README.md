@@ -5,12 +5,16 @@
 1. Install docker on the desktop - https://docs.docker.com/compose/install/
 2. Check for docker & docker-compose version -  `docker --version`, `docker-compose --version`
 3. Clone the project - `git clone git@github.com:shivasaicharanruthala/dataops-takehome-2.git`
-4. Go project directory - `cd dataops-takehome2-`
+4. Go project directory - `cd dataops-takehome-2`
 5. Run the docker-compose file - `docker-compose up -d`
 6. Check the logs of application container 
   - check for active logs: `docker ps`
   - check for container id of the image: `docker ps --filter "ancestor=shiva5128/dataops-takehome-2:latest"`
   - check for logs: `docker logs <container-id>`
+7. Check the data in postgres
+  - Conenct to postgres: `psql -d postgres -U postgres -p 5432 -h localhost -W`
+  - Use `postgres` as password when prompted in terminal
+  - check the records: `select * from user_logins;`
 ```
 
 
